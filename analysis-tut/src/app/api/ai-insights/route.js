@@ -86,7 +86,7 @@ Format your response as JSON with this structure:
       response_format: { type: 'json_object' }
     });
 
-    const aiResponse = JSON.parse(completion.choices[0].message.content);
+    const aiResponse = completion.choices[0].message.content;
 
     return NextResponse.json({
       ...aiResponse,

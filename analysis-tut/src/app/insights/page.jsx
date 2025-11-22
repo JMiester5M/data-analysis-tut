@@ -29,11 +29,24 @@ export default function InsightsPage() {
     }
   }, [router]);
 
-  const handleGenerate = async () => {
-    if (!qualityAnalysis) return;
-    const insights = await generateAIInsights(qualityAnalysis);
-    setAiInsights(insights);
-  };
+ const handleGenerate = async () => {
+  if (!qualityAnalysis) return;
+  console.log('Button clicked, generating AI insights'); // <- Debug
+  try {
+    const res = await fetch('app/api/ai-insights/route.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ dataAnalysis: qualityAnalysis }),
+    });
+    if (!res.ok) throw new Error('AI API call failed');
+    const data = await res.json();
+    console.log('AI response:', data); // <- Debug
+    setAiInsights(data);
+  } catch (err) {
+    console.error('AI generation failed:', err);
+    alert('Failed to generate AI insights. Check console for details.');
+  }
+};
 
   if (loading) return <div className="insights-page"><p>Loading insights...</p></div>;
   if (!parsedData) return null;
@@ -136,7 +149,15 @@ export default function InsightsPage() {
       {qualityAnalysis && (
         <div className="section-card">
           <h3>AI Enhancement Suggestions</h3>
-          <AIInsights qualityAnalysis={qualityAnalysis} onGenerateInsights={handleGenerate} insights={aiInsights} />
+          <div className="ai-insights-preview">
+            <p>Total Columns: {qualityAnalysis.columnStats ? Object.keys(qualityAnalysis.columnStats).length : 0}</p>
+            <p>Total Issues: {qualityAnalysis.issues?.length || 0}</p>
+          </div>
+          <AIInsights
+            qualityAnalysis={qualityAnalysis}
+            insights={aiInsights}            // parent state
+            onGenerate={handleGenerate}
+            />
         </div>
       )}
 

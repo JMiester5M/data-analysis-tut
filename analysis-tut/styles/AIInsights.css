@@ -1,0 +1,335 @@
+/* AIInsights Component Styles */
+
+.ai-insights {
+  width: 100%;
+  padding: 1.5rem;
+  background: var(--background-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+/* Prompt Section */
+.insights-prompt {
+  text-align: center;
+  padding: 2rem;
+}
+
+.prompt-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.insights-prompt h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+}
+
+.insights-prompt > p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.insights-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.insights-features li {
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.generate-btn {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+}
+
+.generate-btn .spinner {
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.error-message {
+  color: var(--danger-color);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Insights Content */
+.insights-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.insight-section {
+  padding: 1.5rem;
+  background: var(--surface-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.insight-section h4 {
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Summary Section */
+.summary-section {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 51, 234, 0.05) 100%);
+}
+
+.summary-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.readiness-badge {
+  margin-top: 1rem;
+}
+
+.readiness-badge .badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.readiness-badge .badge.ready {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.readiness-badge .badge.not-ready {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.readiness-reason {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+/* Critical Issues */
+.issues-section {
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.issues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.issue-card {
+  padding: 1rem;
+  background: var(--background-color);
+  border-left: 4px solid var(--danger-color);
+  border-radius: 4px;
+}
+
+.issue-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.severity-icon {
+  font-size: 1.2rem;
+}
+
+.issue-header h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.issue-impact {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.issue-impact strong {
+  color: var(--text-primary);
+}
+
+/* Recommendations */
+.recommendations-section {
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recommendation-card {
+  padding: 1rem;
+  background: var(--background-color);
+  border-left: 4px solid var(--success-color);
+  border-radius: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recommendation-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-card.priority-high {
+  border-left-color: var(--danger-color);
+}
+
+.recommendation-card.priority-medium {
+  border-left-color: var(--warning-color);
+}
+
+.recommendation-card.priority-low {
+  border-left-color: var(--success-color);
+}
+
+.rec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.rec-header h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.priority-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: var(--surface-color);
+  color: var(--text-secondary);
+}
+
+.priority-high .priority-badge {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+}
+
+.priority-medium .priority-badge {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+}
+
+.priority-low .priority-badge {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success-color);
+}
+
+.rec-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.sql-example {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: var(--surface-color);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.sql-example code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Metadata */
+.insights-metadata {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.insights-metadata small {
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+}
+
+.regenerate-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ai-insights {
+    padding: 1rem;
+  }
+
+  .insights-prompt {
+    padding: 1.5rem 1rem;
+  }
+
+  .insight-section {
+    padding: 1rem;
+  }
+
+  .rec-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .insights-metadata {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

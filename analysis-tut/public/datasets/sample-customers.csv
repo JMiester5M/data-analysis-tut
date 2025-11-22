@@ -1,0 +1,11 @@
+Customer ID,Name,Email,Phone,City,Country,Join Date,Total Purchases,Status
+C001,John Smith,john.smith@email.com,555-0101,New York,USA,2023-06-15,1299.99,Active
+C002,Jane Doe,jane.doe@email.com,555-0102,London,UK,2023-07-20,24.99,Active
+C003,Bob Johnson,bob.j@email.com,555-0103,Tokyo,Japan,2023-08-10,79.99,Active
+C004,Alice Brown,alice.b@email.com,,Chicago,USA,2023-09-05,349.99,Active
+C005,Charlie Wilson,charlie.w@email.com,555-0105,Paris,France,2023-10-12,1299.99,Active
+C006,Diana Martinez,diana.m@email.com,555-0106,Singapore,Singapore,2023-11-01,74.97,Inactive
+C007,Frank Anderson,,555-0107,Toronto,Canada,2023-11-15,159.98,Active
+C008,Grace Lee,grace.l@email.com,555-0108,Berlin,Germany,2023-12-01,349.99,Active
+C009,Henry Taylor,henry.t@email.com,555-0109,Seoul,South Korea,2024-01-05,1299.99,Active
+C010,Ivy Chen,ivy.chen@email.com,,San Francisco,USA,2024-01-15,24.99,Active

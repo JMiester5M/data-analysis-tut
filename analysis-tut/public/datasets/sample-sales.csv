@@ -1,0 +1,11 @@
+Order ID,Customer Name,Product,Quantity,Price,Order Date,Region,Status
+1001,John Smith,Laptop,1,1299.99,2024-01-15,North America,Completed
+1002,Jane Doe,Mouse,2,24.99,2024-01-16,Europe,Pending
+1003,Bob Johnson,Keyboard,1,79.99,2024-01-16,Asia,Completed
+1004,Alice Brown,Monitor,1,349.99,2024-01-17,North America,Completed
+1005,Charlie Wilson,Laptop,1,1299.99,2024-01-18,Europe,Shipped
+1006,Diana Martinez,Mouse,3,24.99,2024-01-18,Asia,Completed
+1007,Frank Anderson,Keyboard,2,79.99,2024-01-19,North America,Pending
+1008,Grace Lee,Monitor,1,349.99,2024-01-20,Europe,Completed
+1009,Henry Taylor,Laptop,1,1299.99,2024-01-21,Asia,Completed
+1010,Ivy Chen,Mouse,1,24.99,2024-01-22,North America,Shipped

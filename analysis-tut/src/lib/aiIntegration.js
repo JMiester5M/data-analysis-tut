@@ -15,7 +15,7 @@ export async function generateAIInsights(dataAnalysis) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ dataAnalysis: qualityAnalysis }),
+      body: JSON.stringify({ dataAnalysis: dataAnalysis }),
     });
 
     if (!response.ok) {

@@ -1,0 +1,6 @@
+Product ID,Product Name,Category,Price,Stock,Status
+P001,Laptop,Electronics,999.99,15,Active
+P002,Mouse,Electronics,29.99,85,Active
+P003,Keyboard,Electronics,,42,Inactive
+P004,Monitor,Electronics,349.99,8,Active
+P005,USB Cable,Accessories,9.99,150,Active

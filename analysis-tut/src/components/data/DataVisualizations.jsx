@@ -238,15 +238,6 @@ export default function DataVisualizations({ qualityAnalysis, parsedData }) {
           </div>
         </div>
 
-        {/* Missing Values by Column */}
-        <div className="chart-card chart-card-wide">
-          <h4>❌ Missing Values by Column</h4>
-          <p className="chart-description">Number of missing values in each column</p>
-          <div className="chart-container">
-            <Bar data={missingValuesData} options={missingValuesOptions} />
-          </div>
-        </div>
-
         {/* Issues by Severity */}
         {qualityAnalysis.issues.length > 0 && (
           <div className="chart-card">
@@ -257,6 +248,44 @@ export default function DataVisualizations({ qualityAnalysis, parsedData }) {
             </div>
           </div>
         )}
+
+        {/* Column Analysis - Table */}
+        <div className="chart-card chart-card-wide">
+          <h4>📋 Column Analysis</h4>
+          <p className="chart-description">Detailed breakdown of each column's data quality</p>
+          <div className="column-analysis-table">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>Column</th>
+                  <th>Type</th>
+                  <th>Missing</th>
+                  <th>Unique</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {parsedData.headers.map((col, i) => {
+                  const stats = qualityAnalysis.columnStats[col];
+                  const colIssues = qualityAnalysis.issues.filter(is => is.column === col);
+                  const hasMissing = (stats?.missing?.count || 0) > 0;
+                  const hasIssues = colIssues.length > 0 || hasMissing;
+                  return (
+                    <tr key={i} className={hasIssues ? 'has-issues' : ''}>
+                      <td><strong>{col}</strong></td>
+                      <td>{stats?.type?.type || stats?.type}</td>
+                      <td>{stats?.missing?.count} ({stats?.missing?.percentage?.toFixed(1) || 0}%)</td>
+                      <td>{stats?.unique} ({stats?.uniquePercentage?.toFixed(0) || 0}%)</td>
+                      <td className={`status ${hasIssues ? 'alert' : 'ok'}`}>
+                        {hasIssues ? '⚠️ Missing' : '✓ Complete'}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
       {/* Summary Stats */}

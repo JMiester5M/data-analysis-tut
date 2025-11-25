@@ -1,0 +1,16 @@
+Customer ID,First Name,Last Name,Email,Phone,City,Country,Registration Date,Total Orders,Last Purchase
+C001,John,Smith,john.smith@email.com,555-0101,New York,USA,2022-01-15,12,2024-11-20
+C002,Sarah,Johnson,sarah.j@email.com,555-0102,Los Angeles,USA,2022-03-22,8,2024-11-18
+C003,Michael,Brown,,555-0103,Chicago,USA,2022-05-10,15,2024-11-19
+C004,Emily,Davis,emily.d@email.com,,Houston,USA,2022-07-05,6,2024-11-15
+C005,David,Wilson,david.wilson@email.com,555-0105,Phoenix,USA,2022-09-12,20,2024-11-21
+C006,Jennifer,Martinez,jen.m@email.com,555-0106,Philadelphia,USA,2022-11-08,,2024-11-10
+C007,Robert,Garcia,robert.g@email.com,555-0107,San Antonio,USA,2023-01-20,11,2024-11-22
+C008,Linda,Rodriguez,linda.r@email.com,555-0108,San Diego,USA,2023-03-15,9,2024-11-17
+C009,James,Lee,,555-0109,Dallas,USA,2023-05-25,7,2024-11-16
+C010,Patricia,Perez,patricia.p@email.com,555-0110,San Jose,USA,2023-07-30,14,2024-11-20
+C011,Charles,Taylor,charles.t@email.com,555-0111,Austin,USA,2023-09-10,5,2024-11-14
+C012,Barbara,Anderson,,555-0112,Jacksonville,USA,2023-11-05,13,2024-11-21
+C013,Christopher,Thomas,chris.thomas@email.com,555-0113,Fort Worth,USA,2024-01-08,3,2024-11-19
+C014,Susan,Moore,,555-0114,Columbus,USA,2024-03-12,8,2024-11-18
+C015,Daniel,Jackson,daniel.j@email.com,555-0115,Charlotte,USA,2024-05-20,10,2024-11-22

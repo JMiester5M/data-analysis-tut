@@ -3,16 +3,19 @@
 import { useState } from 'react';
 import '../../../styles/AIInsights.css';
 
-export default function AIInsights({ qualityAnalysis, insights, onGenerate = () => {} }) {
+export default function AIInsights({ qualityAnalysis, insights, onGenerateInsights = () => {} }) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState(null);
 
   const handleGenerateClick = async () => {
-    if (!onGenerate) return;
+    if (typeof onGenerateInsights !== 'function') {
+      console.error('onGenerateInsights is not a function:', typeof onGenerateInsights, onGenerateInsights);
+      return;
+    }
     setIsGenerating(true);
     setError(null);
     try {
-      onGenerate();
+      await onGenerateInsights();
     } catch (err) {
       console.error('Failed to generate insights:', err);
       setError('Failed to generate AI insights. Please try again.');
@@ -66,27 +69,63 @@ export default function AIInsights({ qualityAnalysis, insights, onGenerate = () 
         </div>
       ) : (
         <div className="insights-content">
-          <h4>📝 Summary</h4>
-          <p>{insights.summary}</p>
+          {/* Summary Section */}
+          <div className="insight-section">
+            <h3 className="section-title">📝 Summary</h3>
+            <p className="section-text">{insights.summary}</p>
+          </div>
 
-          {insights.criticalIssues?.length > 0 && (
-            <div>
-              <h4>⚠️ Critical Issues</h4>
-              {insights.criticalIssues.map((i, idx) => (
-                <p key={idx}>{getSeverityIcon(i.severity)} {i.issue} — {i.impact}</p>
-              ))}
+          {/* Critical Issues Section */}
+          {Array.isArray(insights?.criticalIssues) && insights.criticalIssues.length > 0 && (
+            <div className="insight-section">
+              <h3 className="section-title">⚠️ Critical Issues</h3>
+              <ul className="issues-list">
+                {insights.criticalIssues.map((i, idx) => (
+                  <li key={idx} className={`issue-item severity-${i?.severity || 'unknown'}`}>
+                    <span className="issue-icon">{getSeverityIcon(i?.severity)}</span>
+                    <div className="issue-details">
+                      <strong className="issue-title">{i?.issue || 'Unknown issue'}</strong>
+                      <p className="issue-impact">{i?.impact || 'No impact description'}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
 
-          {insights.recommendations?.length > 0 && (
-            <div>
-              <h4>💡 Recommendations</h4>
-              {insights.recommendations.map((r, idx) => (
-                <p key={idx}>[{r.priority}] {r.title}: {r.description}</p>
-              ))}
+          {/* Recommendations Section */}
+          {Array.isArray(insights?.recommendations) && insights.recommendations.length > 0 && (
+            <div className="insight-section">
+              <h3 className="section-title">💡 Recommendations</h3>
+              <ol className="recommendations-list">
+                {insights.recommendations.map((r, idx) => (
+                  <li key={idx} className={`recommendation-item priority-${r?.priority || 'unknown'}`}>
+                    <div className="recommendation-header">
+                      <strong className="recommendation-title">{r?.title || 'Untitled'}</strong>
+                      <span className="priority-badge">{r?.priority || 'unknown'}</span>
+                    </div>
+                    <p className="recommendation-description">{r?.description || 'No description'}</p>
+                  </li>
+                ))}
+              </ol>
             </div>
           )}
 
+          {/* Readiness Section */}
+          {insights?.readiness && typeof insights.readiness === 'object' && (
+            <div className="insight-section readiness-section">
+              <h3 className="section-title">✅ Data Readiness Assessment</h3>
+              <div className={`readiness-status ${insights.readiness.ready === true ? 'ready' : 'not-ready'}`}>
+                <span className="readiness-icon">{insights.readiness.ready === true ? '✓' : '✗'}</span>
+                <div className="readiness-text">
+                  <strong>{insights.readiness.ready === true ? 'Ready for Analysis' : 'Needs Cleaning'}</strong>
+                  <p>{insights.readiness.reason || 'No reason provided'}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Metadata */}
           <div className="insights-metadata">
             <small>Generated: {new Date(insights.generated).toLocaleString()}</small>
             <button

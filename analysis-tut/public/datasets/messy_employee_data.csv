@@ -1,0 +1,53 @@
+Employee_ID,Full_Name,Department,Salary,Hire_Date,Email,Phone_Number,Performance_Score,Manager_ID,Status
+EMP001,John Smith,Sales,,$5,000,2020-01-15,john.smith@company.com,555-0101,95,MGR001,Active
+EMP002,Sarah Johnson,IT,85000,2019-03-22,,555-0102,87,MGR002,Active
+EMP003,Michael Brown,HR,$72000,2021/05/10,michael.b@company.com,5550103,92,,Inactive
+EMP004,Emily Davis,Finance,78000,2020-12-05,emily.davis@email.com,,88,MGR001,Active
+EMP005,David Wilson,Sales,65000,02-14-2021,,555-0105,76,MGR003,On Leave
+EMP006,Jennifer Martinez,IT,95000,2018-07-20,jen.martinez@company.com,555 0106,91,MGR002,Active
+EMP007,Robert Garcia,HR,$82,000,2019-11-08,robert.g@company.com,555-0107,84,MGR001,Terminated
+EMP008,Linda Rodriguez,Finance,,2020-03-15,linda.r@company.com,555-0108,79,MGR004,Active
+EMP009,James Lee,Sales,7200.5,2021-05-25,,5550109,85,,Active
+EMP010,Patricia Perez,IT,9200.99,2022-07-30,patricia.p@company.com,555-0110,89,MGR002,Active
+EMP011,Charles Taylor,HR,71000,2019-09-10,,555-0111,77,MGR001,Active
+EMP012,Barbara Anderson,Finance,80000,2020/11/05,barbara.a@company.com,555.0112,93,MGR004,Active
+EMP013,Christopher Thomas,Sales,$69,000,2021-01-08,chris.thomas@company.com,,81,MGR003,On Leave
+EMP014,Susan Moore,IT,88000,December 12 2020,,555-0114,86,MGR002,Active
+EMP015,Daniel Jackson,HR,$75000,2020-05-20,daniel.j@company.com,555-0115,82,MGR001,Active
+EMP016,Nancy White,Finance,79500,2019-08-15,nancy.w@company.com,555-0116,88,,Active
+EMP017,Matthew Harris,Sales,64000,2021-03-22,,555 0117,74,MGR003,Active
+EMP018,Karen Clark,IT,92000,2020-02-10,karen.c@company.com,555-0118,90,MGR002,Terminated
+EMP019,Donald Lewis,HR,$73000,2022/06/30,donald.l@company.com,,78,MGR001,Active
+EMP020,Jessica Walker,Finance,,2019-11-20,,555-0120,85,MGR004,Active
+EMP021,Anthony Hall,Sales,68000,2020-09-12,anthony.h@company.com,555-0121,83,MGR003,Active
+EMP022,Ashley Young,IT,87000,2021-04-05,ashley.y@company.com,,87,MGR002,Active
+EMP023,Mark Hernandez,HR,76000,2019-12-18,,555-0123,79,MGR001,On Leave
+EMP024,Melissa King,Finance,81500,2020-10-08,melissa.k@company.com,555 0124,91,MGR004,Active
+EMP025,Steven Wright,Sales,$70000,2021-07-20,steven.w@company.com,555-0125,84,MGR003,Active
+EMP026,Deborah Lopez,IT,,2020-01-30,deborah.l@company.com,555-0126,88,MGR002,Active
+EMP027,Paul Scott,HR,72000,2022-05-15,,555.0127,80,MGR001,Active
+EMP028,Angela Green,Finance,79000,2019-09-22,angela.g@company.com,555-0128,86,,Terminated
+EMP029,Andrew Adams,Sales,66000,March 5 2021,andrew.a@company.com,5550129,75,MGR003,Active
+EMP030,Michelle Nelson,IT,90000,2020-11-10,,555-0130,89,MGR002,Active
+EMP031,Kenneth Carter,HR,$74000,2021-02-28,kenneth.c@company.com,555-0131,81,MGR001,Active
+EMP032,Dorothy Mitchell,Finance,8200.00,2020-04-12,dorothy.m@company.com,555 0132,87,MGR004,Active
+EMP033,Brian Roberts,Sales,67500,2019-08-20,,555-0133,82,MGR003,On Leave
+EMP034,Betty Phillips,IT,86000,2021-06-15,betty.p@company.com,555-0134,86,MGR002,Active
+EMP035,Edward Campbell,HR,,$73,500,2020-03-08,,555-0135,80,MGR001,Active
+EMP036,Sandra Parker,Finance,,2022-01-20,sandra.p@company.com,555-0136,84,MGR004,Active
+EMP037,Ronald Evans,Sales,69000,2020-09-30,ronald.e@company.com,555 0137,83,MGR003,Active
+EMP038,Christine Edwards,IT,91000,2019-10-12,,555-0138,88,MGR002,Active
+EMP039,Ronald Collins,HR,75500,2021-04-18,ronald.c@company.com,555-0139,79,MGR001,Terminated
+EMP040,Kathleen Reeves,Finance,80500,2020-07-25,kathleen.r@company.com,555.0140,89,,Active
+EMP041,Timothy Morris,Sales,,2021-11-08,timothy.m@company.com,555-0141,81,MGR003,Active
+EMP042,Lisa Rogers,IT,89000,2020-05-30,,555 0142,87,MGR002,Active
+EMP043,Jason Reed,HR,7300.50,2022-02-14,jason.r@company.com,555-0143,78,MGR001,Active
+EMP044,Anna Cook,Finance,82000,2019-12-22,anna.c@company.com,,90,MGR004,Active
+EMP045,Jeffrey Morgan,Sales,68500,2020-08-15,,555-0145,82,MGR003,On Leave
+EMP046,Diane Bell,IT,88500,2021-03-30,diane.b@company.com,555 0146,85,MGR002,Active
+EMP047,Ryan Murphy,HR,$76,500,2020-06-20,ryan.m@company.com,555-0147,80,MGR001,Active
+EMP048,Pamela Bailey,Finance,,2022-04-10,,555-0148,86,MGR004,Active
+EMP049,Jacob Rivera,Sales,70000,2021-09-05,jacob.r@company.com,555-0149,84,MGR003,Active
+EMP050,Brenda Cooper,IT,92500,2020-02-28,brenda.c@company.com,555.0150,88,MGR002,Active
+EMP051,Gary Richardson,HR,77000,2019-07-12,,555-0151,81,MGR001,Active
+EMP052,Gloria Cox,Finance,81000,2021-01-18,gloria.c@company.com,555 0152,87,MGR004,Terminated

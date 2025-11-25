@@ -87,9 +87,16 @@ Format your response as JSON with this structure:
     });
 
     const aiResponse = completion.choices[0].message.content;
+    let parsedResponse;
+    try {
+      parsedResponse = typeof aiResponse === 'string' ? JSON.parse(aiResponse) : aiResponse;
+    } catch (e) {
+      console.error('Failed to parse AI response:', e);
+      parsedResponse = { error: 'Failed to parse AI response' };
+    }
 
     return NextResponse.json({
-      ...aiResponse,
+      ...parsedResponse,
       generated: new Date().toISOString(),
       model: 'gpt-4o-mini',
       context: context

@@ -9,6 +9,7 @@ import { generateAIInsights } from '@/lib/aiIntegration';
 import { downloadReport } from '@/lib/reportGenerator';
 import AIInsights from '@/components/data/AIInsights';
 import DataVisualizations from '@/components/data/DataVisualizations';
+import QualityHistory from '@/components/data/QualityHistory';
 import '../../../styles/AnalysisPage.css';
 
 function scoreColor(score) {
@@ -56,20 +57,44 @@ export default function AnalysisPage() {
   // Persist recent analyses when qualityAnalysis is ready
   useEffect(() => {
     if (!qualityAnalysis || !parsedData) return;
-    try {
-      const entry = {
-        fileName: parsedData.fileName,
-        score: qualityAnalysis.overallScore,
-        analyzedAt: Date.now()
-      };
-      const existing = JSON.parse(localStorage.getItem('recentAnalyses') || '[]');
-      // Deduplicate by fileName keeping latest
-      const filtered = existing.filter(e => e.fileName !== entry.fileName);
-      const next = [entry, ...filtered].slice(0, 5); // keep max 5
-      localStorage.setItem('recentAnalyses', JSON.stringify(next));
-    } catch (err) {
-      console.warn('Failed to persist recent analysis', err);
-    }
+    (async () => {
+      try {
+        const entry = {
+          fileName: parsedData.fileName,
+          score: qualityAnalysis.overallScore,
+          analyzedAt: Date.now()
+        };
+        await fetch('/api/recent-analyses', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(entry)
+        })
+      } catch (err) {
+        console.warn('Failed to persist recent analysis', err);
+      }
+    })()
+  }, [qualityAnalysis, parsedData]);
+
+  // Persist quality history (for monitoring over time)
+  useEffect(() => {
+    if (!qualityAnalysis || !parsedData) return;
+    (async () => {
+      try {
+        const entry = {
+          fileName: parsedData.fileName,
+          ts: Date.now(),
+          overallScore: qualityAnalysis.overallScore,
+          scores: qualityAnalysis.scores
+        };
+        await fetch('/api/quality-history', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(entry)
+        })
+      } catch (err) {
+        console.warn('Failed to persist quality history', err);
+      }
+    })()
   }, [qualityAnalysis, parsedData]);
 
   const handleNewUpload = () => {
@@ -82,8 +107,12 @@ export default function AnalysisPage() {
   };
   const handleGenerateInsights = async () => {
     if (!qualityAnalysis) return;
-    const insights = await generateAIInsights(qualityAnalysis);
-    setAiInsights(insights);
+    try {
+      const insights = await generateAIInsights(qualityAnalysis);
+      setAiInsights(insights);
+    } catch (err) {
+      console.error('Failed to generate insights:', err);
+    }
   };
 
   if (loading) return <div className="analysis-page"><p>Loading analysis...</p></div>;
@@ -171,42 +200,15 @@ export default function AnalysisPage() {
 
       {qualityAnalysis && (
         <div className="section-card">
-          <h3>AI-Powered Insights</h3>
-          <AIInsights qualityAnalysis={qualityAnalysis} onGenerateInsights={handleGenerateInsights} insights={aiInsights} />
+          <h3>Quality History</h3>
+          <QualityHistory fileName={parsedData.fileName} />
         </div>
       )}
 
       {qualityAnalysis && (
         <div className="section-card">
-          <h3>Column Analysis</h3>
-          <div className="column-analysis-table">
-            <table className="data-table">
-              <thead>
-                <tr>
-                  <th>Column</th>
-                  <th>Type</th>
-                  <th>Missing</th>
-                  <th>Unique</th>
-                  <th>Issues</th>
-                </tr>
-              </thead>
-              <tbody>
-                {parsedData.headers.map((h, i) => {
-                  const stats = qualityAnalysis.columnStats[h];
-                  const colIssues = qualityAnalysis.issues.filter(is => is.column === h);
-                  return (
-                    <tr key={i}>
-                      <td><strong>{h}</strong></td>
-                      <td>{stats.type?.type || stats.type}</td>
-                      <td>{stats.missing.count} ({stats.missing.percentage.toFixed(1)}%)</td>
-                      <td>{stats.unique} ({stats.uniquePercentage.toFixed(0)}%)</td>
-                      <td>{colIssues.length ? colIssues.length : '✓'}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+          <h3>AI-Powered Insights</h3>
+          <AIInsights qualityAnalysis={qualityAnalysis} onGenerateInsights={handleGenerateInsights} insights={aiInsights} />
         </div>
       )}
     </div>

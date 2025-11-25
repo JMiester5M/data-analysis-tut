@@ -1,0 +1,273 @@
+{
+  "quality_history": [
+    {
+      "id": 1764045654573,
+      "ts": 1764045653723,
+      "fileName": "long_data.csv",
+      "overallScore": 72.59285714285714,
+      "scores": {
+        "completeness": 85,
+        "uniqueness": 60.198412698412696,
+        "validity": 96,
+        "consistency": 93.33333333333333
+      }
+    },
+    {
+      "id": 1764045641170,
+      "ts": 1764045640304,
+      "fileName": "messy_employee_data.csv",
+      "overallScore": 63.05446808510639,
+      "scores": {
+        "completeness": 85.76923076923077,
+        "uniqueness": 76.8225859247136,
+        "validity": 90,
+        "consistency": 27
+      }
+    },
+    {
+      "id": 1764045504845,
+      "ts": 1764045504363,
+      "fileName": "messy_transaction_data.csv",
+      "overallScore": 57.78659531850636,
+      "scores": {
+        "completeness": 74.58041958041959,
+        "uniqueness": 72.7268794999163,
+        "validity": 89,
+        "consistency": 78.81818181818181
+      }
+    },
+    {
+      "id": 1764045499527,
+      "ts": 1764045498984,
+      "fileName": "long_data.csv",
+      "overallScore": 72.59285714285714,
+      "scores": {
+        "completeness": 85,
+        "uniqueness": 60.198412698412696,
+        "validity": 96,
+        "consistency": 93.33333333333333
+      }
+    },
+    {
+      "id": 1764044549120,
+      "ts": 1764044548847,
+      "fileName": "messy_employee_data.csv",
+      "overallScore": 63.05446808510639,
+      "scores": {
+        "completeness": 85.76923076923077,
+        "uniqueness": 76.8225859247136,
+        "validity": 90,
+        "consistency": 27
+      }
+    },
+    {
+      "id": 1764044493729,
+      "ts": 1764044493514,
+      "fileName": "messy_employee_data.csv",
+      "overallScore": 63.05446808510639,
+      "scores": {
+        "completeness": 85.76923076923077,
+        "uniqueness": 76.8225859247136,
+        "validity": 90,
+        "consistency": 27
+      }
+    },
+    {
+      "id": 1764043920673,
+      "ts": 1764043919911,
+      "fileName": "messy_employee_data.csv",
+      "overallScore": 63.05446808510639,
+      "scores": {
+        "completeness": 85.76923076923077,
+        "uniqueness": 76.8225859247136,
+        "validity": 90,
+        "consistency": 27
+      }
+    },
+    {
+      "id": 1764043786513,
+      "ts": 1764043785699,
+      "fileName": "messy_employee_data.csv",
+      "overallScore": 63.05446808510639,
+      "scores": {
+        "completeness": 85.76923076923077,
+        "uniqueness": 76.8225859247136,
+        "validity": 90,
+        "consistency": 27
+      }
+    },
+    {
+      "id": 1764043759924,
+      "ts": 1764043759311,
+      "fileName": "messy_transaction_data.csv",
+      "overallScore": 57.78659531850636,
+      "scores": {
+        "completeness": 74.58041958041959,
+        "uniqueness": 72.7268794999163,
+        "validity": 89,
+        "consistency": 78.81818181818181
+      }
+    },
+    {
+      "id": 1764043756488,
+      "ts": 1764043755803,
+      "fileName": "messy_transaction_data.csv",
+      "overallScore": 57.78659531850636,
+      "scores": {
+        "completeness": 74.58041958041959,
+        "uniqueness": 72.7268794999163,
+        "validity": 89,
+        "consistency": 78.81818181818181
+      }
+    },
+    {
+      "id": 1764043631269,
+      "ts": 1764043630680,
+      "fileName": "messy_transaction_data.csv",
+      "overallScore": 57.78659531850636,
+      "scores": {
+        "completeness": 74.58041958041959,
+        "uniqueness": 72.7268794999163,
+        "validity": 89,
+        "consistency": 78.81818181818181
+      }
+    },
+    {
+      "id": 1764043556753,
+      "ts": 1764043556014,
+      "fileName": "messy_transaction_data.csv",
+      "overallScore": 57.78659531850636,
+      "scores": {
+        "completeness": 74.58041958041959,
+        "uniqueness": 72.7268794999163,
+        "validity": 89,
+        "consistency": 78.81818181818181
+      }
+    },
+    {
+      "id": 1764043012880,
+      "ts": 1764043012623,
+      "fileName": "messy_transaction_data.csv",
+      "overallScore": 57.78659531850636,
+      "scores": {
+        "completeness": 74.58041958041959,
+        "uniqueness": 72.7268794999163,
+        "validity": 89,
+        "consistency": 78.81818181818181
+      }
+    },
+    {
+      "id": 1764043002877,
+      "ts": 1764043002565,
+      "fileName": "messy_transaction_data.csv",
+      "overallScore": 57.78659531850636,
+      "scores": {
+        "completeness": 74.58041958041959,
+        "uniqueness": 72.7268794999163,
+        "validity": 89,
+        "consistency": 78.81818181818181
+      }
+    },
+    {
+      "id": 1764042980467,
+      "ts": 1764042980048,
+      "fileName": "messy_transaction_data.csv",
+      "overallScore": 57.78659531850636,
+      "scores": {
+        "completeness": 74.58041958041959,
+        "uniqueness": 72.7268794999163,
+        "validity": 89,
+        "consistency": 78.81818181818181
+      }
+    },
+    {
+      "id": 1764042835492,
+      "ts": 1764042835278,
+      "fileName": "messy_transaction_data.csv",
+      "overallScore": 57.78659531850636,
+      "scores": {
+        "completeness": 74.58041958041959,
+        "uniqueness": 72.7268794999163,
+        "validity": 89,
+        "consistency": 78.81818181818181
+      }
+    },
+    {
+      "id": 1764042801528,
+      "ts": 1764042800554,
+      "fileName": "messy_employee_data.csv",
+      "overallScore": 63.05446808510639,
+      "scores": {
+        "completeness": 85.76923076923077,
+        "uniqueness": 76.8225859247136,
+        "validity": 90,
+        "consistency": 27
+      }
+    },
+    {
+      "id": 1764042766734,
+      "ts": 1764042766426,
+      "fileName": "messy_employee_data.csv",
+      "overallScore": 63.05446808510639,
+      "scores": {
+        "completeness": 85.76923076923077,
+        "uniqueness": 76.8225859247136,
+        "validity": 90,
+        "consistency": 27
+      }
+    },
+    {
+      "id": 1764042663696,
+      "ts": 1764042663125,
+      "fileName": "messy_employee_data.csv",
+      "overallScore": 63.05446808510639,
+      "scores": {
+        "completeness": 85.76923076923077,
+        "uniqueness": 76.8225859247136,
+        "validity": 90,
+        "consistency": 27
+      }
+    },
+    {
+      "id": 1764042553956,
+      "ts": 1764042553304,
+      "fileName": "messy_employee_data.csv",
+      "overallScore": 63.05446808510639,
+      "scores": {
+        "completeness": 85.76923076923077,
+        "uniqueness": 76.8225859247136,
+        "validity": 90,
+        "consistency": 27
+      }
+    },
+    {
+      "id": 1764042532947,
+      "ts": 1764042532561,
+      "fileName": "messy_employee_data.csv",
+      "overallScore": 63.05446808510639,
+      "scores": {
+        "completeness": 85.76923076923077,
+        "uniqueness": 76.8225859247136,
+        "validity": 90,
+        "consistency": 27
+      }
+    }
+  ],
+  "recent_analyses": [
+    {
+      "fileName": "messy_employee_data.csv",
+      "score": 63.05446808510639,
+      "analyzedAt": 1764045640304
+    },
+    {
+      "fileName": "long_data.csv",
+      "score": 72.59285714285714,
+      "analyzedAt": 1764045498984
+    },
+    {
+      "fileName": "messy_transaction_data.csv",
+      "score": 57.78659531850636,
+      "analyzedAt": 1764043755802
+    }
+  ]
+}

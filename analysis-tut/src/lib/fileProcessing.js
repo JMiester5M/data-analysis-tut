@@ -14,12 +14,14 @@ export function parseCSV(file) {
   return new Promise((resolve, reject) => {
     Papa.parse(file, {
       header: true,
-      dynamicTyping: true,
-      skipEmptyLines: true,
+      dynamicTyping: false, // Keep values as strings to preserve formatting
+      skipEmptyLines: 'greedy', // Skip only completely empty lines
       complete: (results) => {
         if (results.errors.length > 0) {
+          // Only reject on critical parsing failures, not on field mismatches
+          // This allows us to parse messy data with inconsistencies
           const criticalErrors = results.errors.filter(
-            error => error.type === 'FieldMismatch' || error.type === 'Quotes'
+            error => error.type === 'AbortError' || error.type === 'BadDelimiters'
           );
           
           if (criticalErrors.length > 0) {
@@ -33,7 +35,23 @@ export function parseCSV(file) {
         }
 
         const headers = results.meta.fields || [];
-        const rows = results.data;
+        let rows = results.data;
+        
+        // Filter out any rows that are completely empty or are just metadata
+        rows = rows.filter(row => {
+          if (!row || Object.keys(row).length === 0) return false;
+          // Check if all values are empty/null
+          const hasContent = Object.values(row).some(v => v !== null && v !== undefined && v !== '');
+          return hasContent;
+        });
+
+        if (rows.length === 0) {
+          reject({
+            message: 'CSV file contains no valid data rows',
+            type: 'NoDataError'
+          });
+          return;
+        }
 
         resolve({
           headers,

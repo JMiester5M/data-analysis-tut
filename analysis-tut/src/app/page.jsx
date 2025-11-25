@@ -14,10 +14,21 @@ export default function Home() {
 
   // Load recent analyses list
   useEffect(() => {
-    try {
-      const stored = JSON.parse(localStorage.getItem('recentAnalyses') || '[]');
-      setRecent(stored);
-    } catch (_) {}
+    let mounted = true;
+    (async () => {
+      try {
+        const res = await fetch('/api/recent-analyses');
+        if (!res.ok) return;
+        const json = await res.json();
+        if (!mounted) return;
+        setRecent(json.items || []);
+      } catch (e) {
+        console.warn('Failed to load recent analyses', e);
+      }
+    })();
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   const handleFileSelect = async (file) => {

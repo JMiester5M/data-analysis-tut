@@ -1,0 +1,41 @@
+Order ID,Customer ID,Order Date,Product,Category,Quantity,Unit Price,Total Amount,Payment Method,Shipping Address,Status,Notes,Created At,Updated At,Delivered At
+ORD001,C001,2024-11-01,Laptop,Electronics,1,999.99,999.99,Credit Card,123 Main St,Delivered,Fast shipping,2024-11-01,2024-11-05,2024-11-05
+ORD002,C002,2024-11-02,Mouse,Electronics,2,29.99,59.98,PayPal,456 Oak Ave,Delivered,,2024-11-02,2024-11-04,2024-11-04
+ORD003,C003,2024-11-03,Monitor,Electronics,1,349.99,349.99,,789 Pine Rd,Processing,Waiting for payment,2024-11-03,2024-11-03,
+ORD004,C004,2024-11-04,Keyboard,Electronics,,199.99,199.99,Debit Card,321 Elm St,Delivered,Standard delivery,2024-11-04,2024-11-08,2024-11-08
+ORD005,C005,2024-11-05,USB Cable,Accessories,5,9.99,49.95,Credit Card,654 Maple Dr,Shipped,In transit,2024-11-05,2024-11-06,
+ORD006,C001,2024-11-06,Printer,Electronics,1,,299.99,Credit Card,123 Main St,Delivered,Bulk order,2024-11-06,2024-11-10,2024-11-10
+ORD007,C006,2024-11-07,Headphones,Electronics,1,79.99,79.99,PayPal,,Pending,Address verification needed,2024-11-07,2024-11-07,
+ORD008,C002,2024-11-08,Monitor Stand,Accessories,3,24.99,74.97,Credit Card,456 Oak Ave,Delivered,Discounted,2024-11-08,2024-11-12,2024-11-12
+ORD009,C007,2024-11-09,External SSD,Electronics,,129.99,129.99,,789 Pine Rd,Cancelled,Out of stock,2024-11-09,2024-11-09,
+ORD010,C003,2024-11-10,USB Hub,Accessories,2,34.99,69.98,Debit Card,321 Elm St,Delivered,Express shipping,2024-11-10,2024-11-11,2024-11-11
+ORD011,C008,2024-11-11,Webcam,Electronics,1,59.99,59.99,Credit Card,654 Maple Dr,Processing,Image quality verified,2024-11-11,2024-11-11,
+ORD012,C004,2024-11-12,Desk Lamp,Home,1,,45.99,PayPal,123 Main St,Shipped,,2024-11-12,2024-11-12,
+ORD013,C009,2024-11-13,Phone Stand,Accessories,,19.99,19.99,Credit Card,,Pending,Customer pending confirmation,2024-11-13,2024-11-13,
+ORD014,C005,2024-11-14,Ethernet Cable,Accessories,10,7.99,79.90,Credit Card,456 Oak Ave,Delivered,Bulk purchase,2024-11-14,2024-11-16,2024-11-16
+ORD015,C010,2024-11-15,Graphics Card,Electronics,1,449.99,449.99,Debit Card,789 Pine Rd,Processing,,2024-11-15,2024-11-15,
+ORD016,C001,2024-11-16,RAM Module,Electronics,,99.99,99.99,Credit Card,321 Elm St,Delivered,High performance,2024-11-16,2024-11-18,2024-11-18
+ORD017,C006,2024-11-17,SSD,Electronics,1,199.99,199.99,PayPal,654 Maple Dr,Shipped,Fast delivery expected,2024-11-17,2024-11-17,
+ORD018,C002,2024-11-18,Power Supply,Electronics,,119.99,119.99,,123 Main St,Delivered,Replacement unit,2024-11-18,2024-11-20,2024-11-20
+ORD019,C011,2024-11-19,Cooling Fan,Electronics,2,29.99,59.98,Credit Card,456 Oak Ave,Processing,Stock check needed,2024-11-19,2024-11-19,
+ORD020,C003,2024-11-20,Cable Organizer,Accessories,5,4.99,24.95,Debit Card,,Delivered,Free shipping applied,2024-11-20,2024-11-21,2024-11-21
+ORD021,C012,2024-11-21,Motherboard,Electronics,1,289.99,289.99,Credit Card,789 Pine Rd,Pending,,2024-11-21,2024-11-21,
+ORD022,C007,2024-11-22,CPU,Electronics,,399.99,399.99,PayPal,321 Elm St,Processing,Premium shipping,2024-11-22,2024-11-22,
+ORD023,C004,2024-11-23,PC Case,Electronics,1,,89.99,Credit Card,654 Maple Dr,Delivered,Quick delivery,2024-11-23,2024-11-23,2024-11-23
+ORD024,C008,2024-11-24,Thermal Paste,Accessories,,9.99,29.97,Debit Card,123 Main St,Shipped,Expedited shipping,2024-11-24,2024-11-24,
+ORD025,C005,2024-11-25,Monitor Arm,Accessories,2,44.99,89.98,Credit Card,456 Oak Ave,Delivered,Ergonomic setup,2024-11-25,2024-11-26,2024-11-26
+ORD026,C009,2024-11-26,Screen Protector,Accessories,10,12.99,129.90,PayPal,789 Pine Rd,Processing,,2024-11-26,2024-11-26,
+ORD027,C010,2024-11-27,Gaming Mouse,Electronics,1,79.99,79.99,,321 Elm St,Delivered,High DPI sensor,2024-11-27,2024-11-28,2024-11-28
+ORD028,C001,2024-11-28,Mechanical Keyboard,Electronics,,199.99,199.99,Credit Card,654 Maple Dr,Processing,RGB lighting,2024-11-28,2024-11-28,
+ORD029,C013,2024-11-29,Mouse Pad,Accessories,3,19.99,59.97,Debit Card,123 Main St,Shipped,XL size,2024-11-29,2024-11-29,
+ORD030,C006,2024-11-30,USB-C Hub,Electronics,1,89.99,89.99,Credit Card,,Delivered,Multi-port setup,2024-11-30,2024-12-01,2024-12-01
+ORD031,C002,2024-12-01,HDMI Cable,Accessories,,14.99,59.96,PayPal,456 Oak Ave,Pending,Bulk order pending,2024-12-01,2024-12-01,
+ORD032,C011,2024-12-02,DisplayPort Cable,Accessories,5,19.99,99.95,Credit Card,789 Pine Rd,Processing,,2024-12-02,2024-12-02,
+ORD033,C003,2024-12-03,VGA Cable,Accessories,2,,14.98,Debit Card,321 Elm St,Delivered,Legacy support,2024-12-03,2024-12-03,2024-12-03
+ORD034,C014,2024-12-04,Audio Interface,Electronics,1,149.99,149.99,Credit Card,654 Maple Dr,Shipped,Professional grade,2024-12-04,2024-12-04,
+ORD035,C004,2024-12-05,Microphone,Electronics,,129.99,129.99,PayPal,123 Main St,Delivered,Streaming setup,2024-12-05,2024-12-06,2024-12-06
+ORD036,C007,2024-12-06,Speaker,Electronics,2,89.99,179.98,Credit Card,456 Oak Ave,Processing,,2024-12-06,2024-12-06,
+ORD037,C005,2024-12-07,Monitor Light,Accessories,,59.99,59.99,,789 Pine Rd,Delivered,Eye care,2024-12-07,2024-12-08,2024-12-08
+ORD038,C015,2024-12-08,Desk Organizer,Home,3,24.99,74.97,Debit Card,321 Elm St,Pending,Office setup,2024-12-08,2024-12-08,
+ORD039,C008,2024-12-09,Laptop Stand,Accessories,1,69.99,69.99,Credit Card,654 Maple Dr,Shipped,Adjustable height,2024-12-09,2024-12-09,
+ORD040,C009,2024-12-10,Docking Station,Electronics,,199.99,199.99,PayPal,123 Main St,Delivered,Full connectivity,2024-12-10,2024-12-11,2024-12-11

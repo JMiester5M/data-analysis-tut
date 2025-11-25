@@ -1,0 +1,53 @@
+TransactionID,Timestamp,UserID,Amount,Currency,PaymentMethod,Status,Description,AccountNumber,VerificationCode,CountryCode
+TXN001,2024-11-01 09:15:23,USR001,$1,250.50,USD,Credit Card,Completed,Online Purchase,****1234,,US
+TXN002,2024-11-01 10:30:45,USR002,1500,USD,Debit Card,Pending,,*1234,V3K9X,CA
+TXN003,2024-11-01 11:45:12,USR003,850.75,EUR,Wire Transfer,Failed,International wire,****5678,,,
+TXN004,2024-11-01 13:20:33,USR004,2000,USD,,Completed,Subscription renewal,,VERIFY2024,US
+TXN005,2024-11-01 14:55:44,USR005,350,GBP,PayPal,Processing,Digital goods,****9012,XYZAB,UK
+TXN006,2024-11-01 16:10:15,,425.99,USD,Credit Card,Completed,App purchase,****3456,,US
+TXN007,2024-11-01 17:30:28,USR007,1750,USD,Debit Card,,Hotel booking,****7890,Z9M2P,US
+TXN008,2024-11-01 18:45:50,USR008,$999,USD,,Failed,Refund processing,,REFUND001,
+TXN009,2024-11-01 19:15:33,USR009,560.50,USD,Bitcoin,Completed,Crypto purchase,N/A,,US
+TXN010,2024-11-01 20:30:12,USR010,,USD,Credit Card,Pending,Flight booking,****2468,,
+TXN011,2024-11-02 08:20:44,USR011,2200.75,USD,Debit Card,Completed,,****1111,AB1234,US
+TXN012,2024-11-02 09:45:55,USR012,615,EUR,PayPal,Completed,Marketplace purchase,PayPal,,,
+TXN013,2024-11-02 11:10:23,,875.25,USD,,Processing,Cart checkout,,Z5K7L,US
+TXN014,2024-11-02 12:30:44,USR014,1100,GBP,Wire Transfer,Failed,International payment,****5555,VERIFY3,UK
+TXN015,2024-11-02 13:55:12,USR015,$325.99,USD,Credit Card,,Utility payment,****7777,,US
+TXN016,2024-11-02 15:20:30,USR016,750,USD,Debit Card,Completed,Rent payment,,CODE123,US
+TXN017,2024-11-02 16:45:42,USR017,1025.50,JPY,,Completed,Japan purchase,****3333,J9X2M,JP
+TXN018,2024-11-02 18:10:15,USR018,450.75,USD,PayPal,Pending,,PayPal,,US
+TXN019,2024-11-02 19:30:25,,2350,USD,Credit Card,Failed,Large transaction,****8888,X7M4K,US
+TXN020,2024-11-02 20:55:38,USR020,525.99,USD,,Completed,Shopping cart,****4444,,
+TXN021,2024-11-03 07:15:44,USR021,$1800,USD,Debit Card,Processing,Monthly bill,,MONTH11,US
+TXN022,2024-11-03 08:30:12,USR022,650.50,EUR,Credit Card,,Online service,****9999,SECU001,DE
+TXN023,2024-11-03 09:45:33,,925.75,USD,PayPal,Completed,Subscription fee,,P5Q8R,
+TXN024,2024-11-03 11:10:55,USR024,1200,GBP,,Failed,Cross-border transaction,****2222,,UK
+TXN025,2024-11-03 12:25:22,USR025,375,USD,Debit Card,Completed,,****5050,D3L9M,US
+TXN026,2024-11-03 13:40:44,USR026,1050.99,USD,Credit Card,Pending,Premium upgrade,****6666,,US
+TXN027,2024-11-03 15:05:12,USR027,$800,USD,,Completed,Service charge,,SRVICE2,US
+TXN028,2024-11-03 16:20:35,,525.50,EUR,PayPal,Failed,Europe payment,PayPal,EURO123,
+TXN029,2024-11-03 17:45:48,USR029,2100,USD,Debit Card,Completed,Car rental,****7171,,US
+TXN030,2024-11-03 19:10:20,USR030,600.75,USD,,Processing,,****8989,V2T4L,
+TXN031,2024-11-04 06:30:15,USR031,$1350.50,USD,Credit Card,,Mobile app purchase,****0101,MOBILE1,US
+TXN032,2024-11-04 07:55:44,USR032,775,GBP,Debit Card,Completed,UK subscription,****3232,,UK
+TXN033,2024-11-04 09:20:12,,925.99,USD,PayPal,Completed,Gift card purchase,,G7M1N,US
+TXN034,2024-11-04 10:45:33,USR034,1475,USD,,Pending,Investment account,****4747,INV001,
+TXN035,2024-11-04 12:10:55,USR035,425.25,USD,Credit Card,Failed,,****5858,,US
+TXN036,2024-11-04 13:35:20,USR036,$1050,USD,Debit Card,Completed,Annual fee,****6969,ANNU24,US
+TXN037,2024-11-04 15:00:42,,850.50,EUR,,Processing,EU marketplace,****7070,,DE
+TXN038,2024-11-04 16:25:15,USR038,2200.75,USD,PayPal,Completed,Business transaction,,BIZPAY1,US
+TXN039,2024-11-04 17:50:33,USR039,525,GBP,Credit Card,Pending,,****9191,PENDING1,UK
+TXN040,2024-11-04 19:15:48,USR040,1100.99,USD,,Failed,Chargeback case,****0202,,US
+TXN041,2024-11-05 08:00:20,USR041,$750.50,USD,Debit Card,,Express checkout,****1313,EXPR001,US
+TXN042,2024-11-05 09:25:44,,825,USD,Credit Card,Completed,Flash sale purchase,,F3L8M,
+TXN043,2024-11-05 10:50:12,USR043,1250.75,EUR,PayPal,Processing,Europe order,PayPal,,EU
+TXN044,2024-11-05 12:15:30,USR044,600,USD,,Completed,,****4444,W8N1P,US
+TXN045,2024-11-05 13:40:55,USR045,$1875.99,USD,Debit Card,Pending,High-value transaction,****5555,,US
+TXN046,2024-11-05 15:05:18,,925.50,GBP,Credit Card,Failed,UK order,****6666,UK001,
+TXN047,2024-11-05 16:30:42,USR047,1100,USD,,Completed,Bulk purchase,,B9X2Y,US
+TXN048,2024-11-05 17:55:10,USR048,550.75,USD,PayPal,,Pending transaction,****7777,AWAIT1,US
+TXN049,2024-11-05 19:20:35,USR049,$2050,USD,Debit Card,Completed,,****8888,,US
+TXN050,2024-11-05 20:45:55,,750.50,EUR,Credit Card,Failed,Verification failed,****9999,VERIFY4,
+TXN051,2024-11-06 07:10:22,USR051,1300.99,USD,,Processing,Pending authorization,****1010,AUTH001,US
+TXN052,2024-11-06 08:35:44,USR052,825,GBP,PayPal,Completed,UK marketplace,PayPal,,UK

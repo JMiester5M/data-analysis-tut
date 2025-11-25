@@ -33,7 +33,7 @@ export default function InsightsPage() {
   if (!qualityAnalysis) return;
   console.log('Button clicked, generating AI insights'); // <- Debug
   try {
-    const res = await fetch('app/api/ai-insights/route.js', {
+    const res = await fetch('/api/ai-insights', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ dataAnalysis: qualityAnalysis }),
@@ -155,8 +155,8 @@ export default function InsightsPage() {
           </div>
           <AIInsights
             qualityAnalysis={qualityAnalysis}
-            insights={aiInsights}            // parent state
-            onGenerate={handleGenerate}
+            insights={aiInsights}
+            onGenerateInsights={handleGenerate}
             />
         </div>
       )}
